@@ -6,6 +6,8 @@ const CalendarPage = () => {
   const [value, onChange] = useState(new Date());
 
   return (
+
+
     <div className={styles.container}>
       <div className={styles.titlebox}>
         <div className={styles.date}>2024년 5월</div>
@@ -86,6 +88,8 @@ const CalendarPage = () => {
           이번달은 <div className={styles.gren}>건강하게 먹었어요</div>
         </div>
       </div>
+      
+
     </div>
   );
 };
