@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./MainPage.module.css";
+import styles from "../Styles/MainPage.module.css";
 
 const MainPage = () => {
   const [selectedIcon, setSelectedIcon] = useState(null);
