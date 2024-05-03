@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ChatBot from "react-simple-chatbot";
-
+import ConsultingPage from "../pages/Consult";
+import "../Styles/Chatbot.css";
 function Chatbot() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
@@ -72,20 +73,22 @@ function Chatbot() {
   ];
 
   return (
-    <ChatBot
-      style={{
-        width: "100%",
-        height: "100%",
-        backgroundColor: "#fff",
-        borderRadius: "10px",
-        boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
-      }}
-      contentStyle={{ overflow: "hidden" }}
-      bubbleStyle={{ backgroundColor: "#007bff", color: "#fff" }}
-      userDelay={1000}
-      hideHeader={true}
-      steps={steps}
-    />
+    <div>
+      <ConsultingPage />
+      <ChatBot
+        className="chatbot"
+        style={{
+          width: "100%",
+          height: "100%",
+          borderRadius: "10px",
+        }}
+        contentStyle={{ overflow: "hidden" }}
+        bubbleStyle={{ backgroundColor: "#007bff", color: "#fff" }}
+        userDelay={3000}
+        hideHeader={true}
+        steps={steps}
+      />
+    </div>
   );
 }
 

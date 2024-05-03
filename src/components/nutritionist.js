@@ -2,11 +2,11 @@ import React from "react";
 import "../Styles/NutriPage.css";
 const Nutritionist = ({ id, name, numConsult, experience }) => {
   return (
-    <div>
-      <div>{name}</div>
-      <div>상담 횟수 : {numConsult}</div>
-      <div>경력 : {experience}</div>
-      <button>상담 신청하기</button>
+    <div className="profile">
+      <div className="nutritionist-name">{name}</div>
+      <div className="profile_text">상담 횟수 : {numConsult}</div>
+      <div className="profile_text">경력 : {experience}년</div>
+      <button className="profile_button">상담 신청하기</button>
     </div>
   );
 };
