@@ -1,0 +1,138 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 76px;
+}
+
+.top {
+  margin-left: 257px;
+  margin-top: 76px;
+}
+.top_content {
+  display: flex;
+  justify-content: space-around;
+}
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.co_title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 50px;
+  width: 150px;
+  background-color: rgba(51, 133, 255, 0.4);
+  margin-bottom: 10px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+.eval {
+  width: 935px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: bold;
+  border: grey solid 1px;
+  border-radius: 5px;
+  background-color: rgb(236, 236, 236);
+}
+.date {
+  font-size: 40px;
+  font-weight: bold;
+}
+.today_meal {
+  width: 500px;
+}
+.todayeat {
+  margin-top: 58px;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+.menu {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: black solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.menu_r {
+  border: 1px black solid;
+  border-radius: 5px;
+  width: 264px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding-left: 10px;
+}
+.selecttitle {
+  width: 900px;
+  height: 56px;
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+  margin-top: 24px;
+}
+.selectlist {
+  border-radius: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px 12px 20px;
+  border: 1px solid #d9d9d9;
+  margin-right: 24px;
+  background-color: #fff;
+  margin-bottom: 100px;
+}
+.selectlisttitle {
+  margin-left: 8px;
+}
+.fidback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 80px;
+  background-color: #3384ff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+  margin-left: 715px;
+  margin-top: 15px;
+  margin-bottom: 70px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.img {
+  width: 492px;
+  height: 512px;
+}
+.bottom_s_content {
+  border: 1px solid black;
+  width: 950px;
+  height: 54px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
