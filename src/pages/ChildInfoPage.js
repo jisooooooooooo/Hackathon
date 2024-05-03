@@ -2,6 +2,7 @@ import React from "react";
 import "../Styles/ChildInfoPage.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
 function Info() {
   const [name, setName] = useState("");
   const [birthday, setBirthday] = useState("");
@@ -74,9 +75,6 @@ function Info() {
           className="info_input"
           onChange={(event) => setExtra(event.target.value)}
         ></input>
-        <button className="submit_button" onClick={addInfo}>
-          제출
-        </button>
       </div>
     </div>
   );
