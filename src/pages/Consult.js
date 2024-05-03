@@ -1,13 +1,14 @@
 // ConsultingPage.js
 import React from "react";
+import { Link } from "react-router-dom";
+import "../Styles/Consult.css"
 
 const ConsultingPage = () => {
   return (
     <div>
-      <h2>컨설팅 페이지</h2>
-      
+      <Link to={"/nutritionist"}>영양사 고르기</Link>
+      <Link to={"/chatbot"}>상담채팅</Link>
     </div>
   );
 };
-
 export default ConsultingPage;
