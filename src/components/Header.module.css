@@ -2,8 +2,21 @@
   height: 72px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 0 40px;
+}
+.left {
+  width: 48px;
+  height: 48px;
   background-color: #d9d9d9;
 }
 .right {
   display: flex;
+  font-size: 18px;
+  font-weight: bold;
+}
+.rightlist {
+  width: 120px;
+  margin-left: 40px;
 }
