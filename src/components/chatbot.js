@@ -2,72 +2,30 @@ import React, { useState } from "react";
 import ChatBot from "react-simple-chatbot";
 import "../Styles/Chatbot.css";
 function Chatbot() {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  // const [gender, setGender] = useState('');
   const [completed, setCompleted] = useState(false);
 
   const steps = [
     {
       id: "1",
-      message: "안녕! 이름이 뭐야?",
-      trigger: name ? "2" : "getName",
-      end: completed,
-    },
-    {
-      id: "getName",
-      user: true,
+      message: "안녕하세요!",
       trigger: "2",
-      validator: (value) => {
-        if (!value || value.trim() === "") {
-          return "이름을 입력해주세요.";
-        }
-        return true;
-      },
-      onEnter: (value) => {
-        if (!name) {
-          setName(value);
-        }
-      },
+      end: completed,
     },
     {
       id: "2",
-      message: `안녕 ${name}! 나이는 몇 살이니?`,
-      trigger: "getAge",
-      end: completed,
-    },
-    {
-      id: "getAge",
       user: true,
       trigger: "3",
-      validator: (value) => {
-        if (isNaN(value)) {
-          return "숫자를 입력해주세요.";
-        }
-        return true;
-      },
-      onEnter: (value) => {
-        setAge(value);
-      },
     },
     {
       id: "3",
-      message: `성별이 뭐야?`,
-      trigger: "getGender",
+      message:
+        "어머님 안녕하세요, 영양사 000입니다. 지난주 식단을 보니 밀가루 식품을 평소보다 많이 섭취하셨던데, 아토피가 심할 때는 밀가루 섭취도 줄이시거나 최대한 자제하시는 것이 좋습니다. 쌀도 백미로 드시는 것이 권장됩니다. 간식도 지난주 목요일날 주신 새우깡 보다는 가공되지 않은 신선한 과일이나 견과류등을 주시는 것이 좋겠습니다.",
+      trigger: "4",
       end: completed,
     },
     {
-      id: "getGender",
-      options: [
-        { value: "남자", label: "남자", trigger: "4" },
-        { value: "여자", label: "여자", trigger: "4" },
-      ],
-    },
-    {
       id: "4",
-      message: `안녕 ${name}! ${age}살이군요!`,
-      end: true,
-      onTrigger: () => setCompleted(true),
+      user: true,
     },
   ];
 
