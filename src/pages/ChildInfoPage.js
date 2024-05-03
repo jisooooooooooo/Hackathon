@@ -2,6 +2,7 @@ import React from "react";
 import "../Styles/ChildInfoPage.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
 function Info() {
   const [name, setName] = useState("");
   const [birthday, setBirthday] = useState("");

@@ -15,7 +15,18 @@ import Chatbot from "./components/chatbot";
 import Feedback from "./pages/FeedbackPage";
 import ChildInfo from "./pages/ChildInfoPage";
 function App() {
+  const [isFirstVisit, setFirstVisit] = useState(true);
 
+  const handgleFirstVisit = () => {
+    setFirstVisit(false);
+  };
+  if (isFirstVisit) {
+    return (
+      <div>
+        <ChildInfo />
+      </div>
+    );
+  } else {
     return (
       <BrowserRouter>
         <Header />
@@ -34,6 +45,6 @@ function App() {
       </BrowserRouter>
     );
   }
-
+}
 
 export default App;
