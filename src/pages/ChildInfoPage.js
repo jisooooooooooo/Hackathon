@@ -75,6 +75,9 @@ function Info() {
           className="info_input"
           onChange={(event) => setExtra(event.target.value)}
         ></input>
+        <Link to="/main" className="submit_button" onClick={addInfo}>
+          제출
+        </Link>
       </div>
     </div>
   );

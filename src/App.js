@@ -15,22 +15,35 @@ import Chatbot from "./components/chatbot";
 import Feedback from "./pages/FeedbackPage";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/today-food" element={<TodayFood />} />
-        <Route path="/calendar" element={<CalendarPage />} />
-        <Route path="/contents" element={<ContentsPage />} />
-        <Route path="/consulting" element={<NutritionistPage />} />
-        <Route path="/my-page" element={<MyPage />} />
-        <Route path="/nutritionist" element={<NutritionistPage />} />
-        <Route path="/chatbot" element={<Chatbot />} />
-        <Route path="/feedback" element={<Feedback />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  const [isFirstVisit, setFirstVisit] = useState(true);
+
+  const handgleFirstVisit = () => {
+    setFirstVisit(false);
+  };
+  if (isFirstVisit) {
+    return (
+      <div>
+        <ChildInfo />
+      </div>
+    );
+  } else {
+    return (
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/today-food" element={<TodayFood />} />
+          <Route path="/calendar" element={<CalendarPage />} />
+          <Route path="/contents" element={<ContentsPage />} />
+          <Route path="/consulting" element={<NutritionistPage />} />
+          <Route path="/my-page" element={<MyPage />} />
+          <Route path="/nutritionist" element={<NutritionistPage />} />
+          <Route path="/chatbot" element={<Chatbot />} />
+          <Route path="/feedback" element={<Feedback />} />
+        </Routes>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
