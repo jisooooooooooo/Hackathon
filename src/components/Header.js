@@ -6,7 +6,6 @@ export const Header = () => {
     <div className={styles.container}>
       <div className={styles.left}>로고</div>
       <div className={styles.right}>
-        <div className={styles.rightlist}>오늘의 식습관</div>
         <div className={styles.rightlist}>캘린더</div>
         <div className={styles.rightlist}>콘텐츠</div>
         <div className={styles.rightlist}>컨설팅</div>
