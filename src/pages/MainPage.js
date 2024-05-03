@@ -233,6 +233,7 @@ const MainPage = () => {
           <div className={styles.selectlisttitle}>복통</div>
         </button>
       </div>
+      <button className={styles.fidback}>피드백 보러가기</button>
     </div>
   );
 };
