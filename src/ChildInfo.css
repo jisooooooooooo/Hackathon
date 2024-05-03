@@ -1,0 +1,40 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.info_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+}
+.info_title {
+  margin: 0;
+}
+.info_input {
+  margin-bottom: 24px;
+  height: 35px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.info_gender {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info_gender_item {
+  width: 45%;
+  height: 35px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+.submit_button {
+  height: 50px;
+  background-color: #3384ff;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
