@@ -58,12 +58,10 @@ const ContentsPage = () => {
       <div className={styles.scrollContainer}>
         {articles.map((article) => (
           <div key={article.id} className={styles.box}>
-            {/* 이미지 추가 */}
             <div className={styles.boximg}>
               <img src={article.imageUrl} alt="아티클 이미지" />
             </div>
             <div className={styles.boxcontent}>
-              {/* 제목 및 내용 추가 */}
               <div className={styles.boxcontenttitle}>{article.title}</div>
               <div className={styles.boxcontenttitle2}>{article.content}</div>
             </div>
