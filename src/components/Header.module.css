@@ -22,3 +22,10 @@
   text-decoration: none;
   color: black;
 }
+.rightlist:hover {
+  color: #ff5d00; 
+}
+
+.rightlist:active {
+  color: #ff5d00; 
+}

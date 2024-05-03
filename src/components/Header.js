@@ -5,7 +5,9 @@ import styles from "./Header.module.css";
 export const Header = () => {
   return (
     <div className={styles.container}>
-      <Link to='/' className={styles.left}>로고</Link>
+      <Link to="/" className={styles.left}>
+        로고
+      </Link>
       <div className={styles.right}>
         <Link to="/calendar" className={styles.rightlist}>
           캘린더
