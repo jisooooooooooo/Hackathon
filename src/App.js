@@ -9,7 +9,9 @@ import ConsultingPage from "./pages/Consult";
 import ContentsPage from "./pages/ContentPage";
 import TodayFood from "./pages/TodayFood";
 import MainPage from "./pages/MainPage";
-
+import MyPage from "./pages/MyPage";
+import NutritionistPage from "./pages/NutritionistPage";
+import Chatbot from "./components/chatbot";
 function App() {
   return (
     <BrowserRouter>
@@ -20,7 +22,9 @@ function App() {
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/contents" element={<ContentsPage />} />
         <Route path="/consulting" element={<ConsultingPage />} />
-        {/* <Route path="/my-page" element={<MyPage />} /> */}
+        <Route path="/my-page" element={<MyPage />} />
+        <Route path="/nutritionist" element={<NutritionistPage />} />
+        <Route path="/chatbot" element={<Chatbot />} />
       </Routes>
     </BrowserRouter>
   );

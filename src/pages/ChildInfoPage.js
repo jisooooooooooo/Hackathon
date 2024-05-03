@@ -1,5 +1,5 @@
 import React from "react";
-import "./ChildInfo.css";
+import "./ChildInfoPage.css";
 import { useState } from "react";
 
 function Info() {
@@ -15,7 +15,7 @@ function Info() {
   const addInfo = () => {
     setInfo([name, birthday, gender, height, weight, pastDisease, extra, info]);
   };
-  
+
   return (
     <div className="info">
       <h2>아이정보를 입력해주세요</h2>
