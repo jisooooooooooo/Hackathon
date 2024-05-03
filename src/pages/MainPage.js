@@ -1,11 +1,25 @@
 import React, { useState } from "react";
 import styles from "../Styles/MainPage.module.css";
-
+import "../Styles/MainPage.module.css";
+import { Link } from "react-router-dom";
 const MainPage = () => {
   const [selectedIcon, setSelectedIcon] = useState(null);
 
   const handleIconClick = (icon) => {
     setSelectedIcon(icon);
+  };
+  const [clicked_1Button, setClicked_1Button] = useState();
+  const [clicked_2Button, setClicked_2Button] = useState();
+  const [clicked_3Button, setClicked_3Button] = useState();
+
+  const handleClick1 = (button) => {
+    setClicked_1Button(button);
+  };
+  const handleClick2 = (button) => {
+    setClicked_2Button(button);
+  };
+  const handleClick3 = (button) => {
+    setClicked_3Button(button);
   };
 
   return (
@@ -21,9 +35,81 @@ const MainPage = () => {
           <div className={styles.midlist}>점심</div>
           <div className={styles.midlist}>저녁</div>
         </div>
-        <div className={styles.menu}>메뉴 입력</div>
-        <button className={styles.menu1}>다 먹었어요</button>
-        <button className={styles.menu2}>남겼어요</button>
+        <div className={styles.content}>
+          <div>
+            <input
+              type={"text"}
+              className={styles.menu}
+              placeholder={"메뉴 입력"}
+            ></input>
+
+            <button
+              className={`${styles.menu1} ${
+                clicked_1Button === "menu1" ? styles.active : ""
+              }`}
+              onClick={() => handleClick1("menu1")}
+            >
+              다 먹었어요
+            </button>
+            <button
+              className={`${styles.menu2} ${
+                clicked_1Button === "menu2" ? styles.active : ""
+              }`}
+              onClick={() => handleClick1("menu2")}
+            >
+              남겼어요
+            </button>
+          </div>
+
+          <div>
+            <input
+              type={"text"}
+              className={styles.menu}
+              placeholder={"메뉴 입력"}
+            ></input>
+
+            <button
+              className={`${styles.menu1} ${
+                clicked_2Button === "menu1" ? styles.active : ""
+              }`}
+              onClick={() => handleClick2("menu1")}
+            >
+              다 먹었어요
+            </button>
+            <button
+              className={`${styles.menu2} ${
+                clicked_2Button === "menu2" ? styles.active : ""
+              }`}
+              onClick={() => handleClick2("menu2")}
+            >
+              남겼어요
+            </button>
+          </div>
+          <div>
+            <input
+              type={"text"}
+              className={styles.menu}
+              placeholder={"메뉴 입력"}
+            ></input>
+
+            <button
+              className={`${styles.menu1} ${
+                clicked_3Button === "menu1" ? styles.active : ""
+              }`}
+              onClick={() => handleClick3("menu1")}
+            >
+              다 먹었어요
+            </button>
+            <button
+              className={`${styles.menu2} ${
+                clicked_3Button === "menu2" ? styles.active : ""
+              }`}
+              onClick={() => handleClick3("menu2")}
+            >
+              남겼어요
+            </button>
+          </div>
+        </div>
 
         <div>
           <button className={styles.addbtn}>
@@ -106,9 +192,11 @@ const MainPage = () => {
           </button>
         </div>
         <div className={styles.todayeat}>오늘 아이는 어땠나요?</div>
-        <div className={styles.selecttitle}>
-          아이 상태 입력 혹은 하단에서 선택
-        </div>
+        <input
+          type={"text"}
+          placeholder={"아이 상태 입력 혹은 하단에서 선택"}
+          className={styles.selecttitle}
+        ></input>
 
         <button
           className={styles.selectlist}
@@ -233,7 +321,9 @@ const MainPage = () => {
           <div className={styles.selectlisttitle}>복통</div>
         </button>
       </div>
-      <button className={styles.fidback}>피드백 보러가기</button>
+      <Link to={"/feedback"} className={styles.fidback}>
+        피드백 보러가기
+      </Link>
     </div>
   );
 };

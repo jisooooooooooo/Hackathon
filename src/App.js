@@ -11,6 +11,7 @@ import MainPage from "./pages/MainPage";
 import MyPage from "./pages/MyPage";
 import NutritionistPage from "./pages/NutritionistPage";
 import Chatbot from "./components/chatbot";
+
 function App() {
   return (
     <BrowserRouter>
