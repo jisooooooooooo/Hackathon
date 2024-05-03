@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 
 export const Header = () => {
@@ -6,10 +7,18 @@ export const Header = () => {
     <div className={styles.container}>
       <div className={styles.left}>로고</div>
       <div className={styles.right}>
-        <div className={styles.rightlist}>캘린더</div>
-        <div className={styles.rightlist}>콘텐츠</div>
-        <div className={styles.rightlist}>컨설팅</div>
-        <div className={styles.rightlist}>마이페이지</div>
+        <Link to="/calendar" className={styles.rightlist}>
+          캘린더
+        </Link>
+        <Link to="/contents" className={styles.rightlist}>
+          콘텐츠
+        </Link>
+        <Link to="/consulting" className={styles.rightlist}>
+          컨설팅
+        </Link>
+        <Link to="/my-page" className={styles.rightlist}>
+          마이페이지
+        </Link>
       </div>
     </div>
   );

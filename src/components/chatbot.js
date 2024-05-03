@@ -4,7 +4,7 @@ import ChatBot from "react-simple-chatbot";
 function Chatbot() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
-  const [gender, setGender] = useState("");
+  // const [gender, setGender] = useState('');
   const [completed, setCompleted] = useState(false);
 
   const steps = [
@@ -65,7 +65,7 @@ function Chatbot() {
     },
     {
       id: "4",
-      message: `안녕 ${name}! ${age}살 ${gender}이군요!`,
+      message: `안녕 ${name}! ${age}살이군요!`,
       end: true,
       onTrigger: () => setCompleted(true),
     },

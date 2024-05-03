@@ -19,4 +19,6 @@
 .rightlist {
   width: 120px;
   margin-left: 40px;
+  text-decoration: none;
+  color: black;
 }
