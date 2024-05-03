@@ -11,7 +11,7 @@ import MainPage from "./pages/MainPage";
 import MyPage from "./pages/MyPage";
 import NutritionistPage from "./pages/NutritionistPage";
 import Chatbot from "./components/chatbot";
-
+import Feedback from "./pages/FeedbackPage";
 function App() {
   return (
     <BrowserRouter>
@@ -21,10 +21,11 @@ function App() {
         <Route path="/today-food" element={<TodayFood />} />
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/contents" element={<ContentsPage />} />
-        <Route path="/consulting" element={<NutritionistPage/>} />
+        <Route path="/consulting" element={<NutritionistPage />} />
         <Route path="/my-page" element={<MyPage />} />
         <Route path="/nutritionist" element={<NutritionistPage />} />
         <Route path="/chatbot" element={<Chatbot />} />
+        <Route path="/feedback" element={<Feedback />} />
       </Routes>
     </BrowserRouter>
   );
