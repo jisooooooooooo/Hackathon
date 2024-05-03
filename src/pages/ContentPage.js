@@ -1,10 +1,9 @@
-// ContentsPage.js
 import React from "react";
 
 const ContentsPage = () => {
   return (
     <div>
-      <h2>콘텐츠 페이지</h2>
+      <div>최근 본 아티클</div>
       
     </div>
   );
