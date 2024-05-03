@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ChatBot from "react-simple-chatbot";
-import ConsultingPage from "../pages/Consult";
 import "../Styles/Chatbot.css";
 function Chatbot() {
   const [name, setName] = useState("");
@@ -74,7 +73,6 @@ function Chatbot() {
 
   return (
     <div>
-      <ConsultingPage />
       <ChatBot
         className="chatbot"
         style={{
