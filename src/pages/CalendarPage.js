@@ -6,15 +6,7 @@ import GRP from "../assets/graph.png";
 const CalendarPage = () => {
   const [value, onChange] = useState(new Date());
 
-  const getTileClassName = ({ date }) => {
-    const day = date.getDate();
-    if (day === 4 || day === 9) {
-      return styles.redCircle;
-    } else if (day === 5 || day === 10) {
-      return styles.orangeCircle;
-    }
-    return "";
-  };
+  
 
   return (
     <div className={styles.totalbox}>
@@ -98,7 +90,7 @@ const CalendarPage = () => {
             이번달은 <div className={styles.gren}>건강하게 먹었어요</div>
           </div>
         </div>
-      </div>{" "}
+      </div>
       <img src={GRP} className={styles.gra} />
     </div>
   );
