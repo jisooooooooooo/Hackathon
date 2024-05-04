@@ -29,7 +29,7 @@ const MainPage = () => {
           <div className={styles.title}>식습관 기록</div>
           <div className={styles.date}>5월 4일(토)</div>
         </div>
-        <div className={styles.todayeat}>오늘은 뭘 먹었나요?</div>
+        <div className={styles.todayeat}>오늘은 무엇을 먹었나요?</div>
         <div className={styles.mid}>
           <div className={styles.midlist}>아침</div>
           <div className={styles.midlist}>점심</div>

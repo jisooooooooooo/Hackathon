@@ -3,11 +3,13 @@
   justify-content: center;
 }
 .title {
-  font-size: 25px;
-  margin-left: 250px;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 100px;
+  margin-left: 280px;
 }
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3열 그리드 */
@@ -34,7 +36,7 @@
 .profile_button {
   cursor: pointer;
   border: none;
-  background-color: #3384ff;
+  background-color: #ff9200;
   border-radius: 10px;
   width: 140px;
   height: 40px;

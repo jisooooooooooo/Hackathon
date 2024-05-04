@@ -3,12 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   padding: 0 40px;
 }
 .left {
-  width: 55px;
-  height: 55px;
+  margin-top: 80px;
+  width: 90px;
+  height: 90px;
 }
 .right {
   display: flex;

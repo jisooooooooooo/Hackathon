@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 60px;
 }
 .date {
   font-weight: bold;
@@ -80,5 +81,5 @@
   width: 492px;
   height: 584px;
   
-  margin-left: 250px;
+  margin-left: 150px;
 }

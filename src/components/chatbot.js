@@ -28,16 +28,18 @@ function Chatbot() {
 
   return (
     <div>
+      <div className="title">영양사님께 물어보세요</div>
       <ChatBot
         className="chatbot"
         style={{
           width: "100%",
           height: "100%",
           borderRadius: "10px",
+          lineHeight: "1.5",
         }}
         contentStyle={{ overflow: "hidden" }}
-        bubbleStyle={{ backgroundColor: "#007bff", color: "#fff" }}
-        userDelay={3000}
+        bubbleStyle={{ backgroundColor: "#FF9200", color: "#fff" }}
+        userDelay={1000}
         hideHeader={true}
         steps={steps}
       />
