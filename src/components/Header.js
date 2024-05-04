@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../Styles/Header.module.css";
+import logo from "../assets/logo.png";
 export const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -11,8 +12,8 @@ export const Header = () => {
 
   return (
     <div className={styles.container}>
-      <Link to="/" className={styles.left}>
-        로고
+      <Link to="/main">
+        <img src={logo} alt="logo" className={styles.left}></img>
       </Link>
       <div className={styles.right}>
         <Link to="/calendar" className={styles.rightlist}>
