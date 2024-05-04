@@ -2,7 +2,7 @@ import React from "react";
 import "../Styles/ChildInfoPage.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import IMGG from "../assets/main.png";
 function Info() {
   const [name, setName] = useState("");
   const [birthday, setBirthday] = useState("");
@@ -16,10 +16,13 @@ function Info() {
   const addInfo = () => {
     setInfo([name, birthday, gender, height, weight, pastDisease, extra, info]);
   };
+  const handleGenderClick = (selectedGender) => {
+    setGender(selectedGender);
+  };
 
   return (
     <div className="info">
-      <h2>아이정보를 입력해주세요</h2>
+      <div className="title">아이의 정보를 입력해주세요</div>
       <div className="info_div">
         <h4 className="info_title">이름</h4>
         <input
@@ -33,14 +36,14 @@ function Info() {
         <h4 className="info_title">성별</h4>
         <div className="info_gender">
           <button
-            className="info_gender_item"
-            onChange={(event) => setGender(event.target.value)}
+            className={gender === "male" ? "info_gender_item active" : "info_gender_item"}
+            onClick={() => handleGenderClick("male")}
           >
             남
           </button>
           <button
-            className="info_gender_item"
-            onChange={(event) => setGender(event.target.value)}
+            className={gender === "female" ? "info_gender_item active" : "info_gender_item"}
+            onClick={() => handleGenderClick("female")}
           >
             여
           </button>
@@ -79,6 +82,7 @@ function Info() {
           제출
         </Link>
       </div>
+      <img src={IMGG} className="backimg"/>
     </div>
   );
 }
