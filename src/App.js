@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
 import { Header } from "./components/Header";
 import "./reset.css";
-import { useState } from "react";
 // import Chatbot from "./components/chatbot";
 import CalendarPage from "./pages/CalendarPage";
 import ContentsPage from "./pages/ContentPage";

@@ -11,43 +11,32 @@ import {
   Cell,
 } from "recharts";
 
-import axios from "axios";
 import { Link } from "react-router-dom";
 const Feedback = () => {
   const [selectedIcon, setSelectedIcon] = useState(null);
-  const [data, setData] = useState([]);
 
   const handleIconClick = (icon) => {
     setSelectedIcon(icon === selectedIcon ? null : icon);
   };
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const json = [
-          { name: "열량", value: 1060 },
-          { name: "탄수화물", value: 470 },
-          { name: "단백질", value: 800 },
-          { name: "지방", value: 124 },
-          { name: "당류", value: 18 },
-          { name: "나트륨", value: 32 },
-          { name: "콜레스테롤", value: 42 },
-          { name: "포화지방산", value: 67 },
-          { name: "트랜스지방", value: 10 },
-        ];
-        setData(json);
-      } catch (error) {
-        console.error("Error fetching data: ", error);
-      }
-    };
+  const data = [
+    { name: "열량", value: 3100 },
+    { name: "탄수화물", value: 3000 },
+    { name: "단백질", value: 180 },
+    { name: "지방", value: 2500 },
+    { name: "당류", value: 1890 },
+    { name: "나트륨", value: 2390 },
+    { name: "콜레스테롤", value: 3000 },
+    { name: "포화지방산", value: 2190 },
+    { name: "트랜스지방", value: 300 },
+  ];
 
-    fetchData();
-  }, []);
+  // 색상 정의
   const getColor = (value) => {
-    if (value < 300) return "#FF9200";
-    // 부족
-    else if (value >= 600 && value <= 900) return "#00BF40";
-    // 적정
-    else return "#FF4242"; // 초과
+    if (value < 2000) return "#FF8042";
+    // 부족: 주황색
+    else if (value >= 2000 && value <= 3000) return "#82ca9d";
+    // 적정: 초록색
+    else return "#FF0000"; // 초과: 빨강색
   };
   return (
     <div className={styles.container}>
@@ -89,7 +78,7 @@ const Feedback = () => {
           <div>
             <div className={styles.todayeat}>오늘 서준이의 영양진단</div>
             <div className={styles.rightbox}>
-              <BarChart width={412} height={500} layout="vertical" data={data}>
+              <BarChart width={450} height={470} layout="vertical" data={data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis type="number" />
                 <YAxis type="category" dataKey="name" />
@@ -104,7 +93,7 @@ const Feedback = () => {
                     <Cell key={`cell-${index}`} fill={getColor(entry.value)} />
                   ))}
                 </Bar>
-              </BarChart>{" "}
+              </BarChart>
             </div>
           </div>
         </div>
