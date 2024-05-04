@@ -6,7 +6,6 @@ import "./reset.css";
 // import Chatbot from "./components/chatbot";
 import CalendarPage from "./pages/CalendarPage";
 import ContentsPage from "./pages/ContentPage";
-import TodayFood from "./pages/TodayFood";
 import MainPage from "./pages/MainPage";
 import MyPage from "./pages/MyPage";
 import NutritionistPage from "./pages/NutritionistPage";
@@ -20,7 +19,6 @@ function App() {
       <Routes>
         <Route path="/" element={<ChildInfo />} />
         <Route path="/main" element={<MainPage />} />
-        <Route path="/today-food" element={<TodayFood />} />
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/contents" element={<ContentsPage />} />
         <Route path="/consulting" element={<NutritionistPage />} />

@@ -61,7 +61,7 @@ function Info() {
           type="number"
           value={height}
           className="info_input"
-          onChange={(event) => setHeight(event.target.value)}
+          onChange={(event) => setHeight(parseInt(event.target.value))}
         ></input>
         <h4 className="info_title">몸무게(kg)</h4>
         <input
