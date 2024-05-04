@@ -13,7 +13,7 @@ import {
 
 import { Link } from "react-router-dom";
 const Feedback = () => {
-  const [selectedIcon, setSelectedIcon] = useState(null);
+  const [selectedIcon, setSelectedIcon] = useState("atopi");
 
   const handleIconClick = (icon) => {
     setSelectedIcon(icon === selectedIcon ? null : icon);
@@ -197,7 +197,7 @@ const Feedback = () => {
           </button>
         </div>
       </div>
-      <Link to="/" className={styles.fidback}>
+      <Link to="/main" className={styles.fidback}>
         뒤로가기
       </Link>
     </div>
