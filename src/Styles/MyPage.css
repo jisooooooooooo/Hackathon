@@ -1,0 +1,45 @@
+.title {
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.info {
+  margin-bottom: 10px;
+  border: 0.5px grey solid;
+  width: 30%;
+}
+.co_title {
+  font-size: 20px;
+  margin-left: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+}
+
+.more {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.second_info {
+  display: flex;
+  width: 150px;
+}
+.muruk {
+  border: 0.5px grey solid;
+}
+.badge {
+  border: 0.5px grey solid;
+}
+.height {
+  border: 0.5px grey solid;
+}
+.weight {
+  border: 0.5px grey solid;
+}
