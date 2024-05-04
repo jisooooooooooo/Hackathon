@@ -1,5 +1,4 @@
 import React from "react";
-import childPic from "../assets/child.png";
 import "../Styles/MyPage.css";
 import myPage from "../assets/myPage.png";
 

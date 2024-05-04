@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import IMGG from "../assets/main.png";
 function Info() {
   const [name, setName] = useState("");
-  const [birthday, setBirthday] = useState("");
   const [gender, setGender] = useState("");
   const [height, setHeight] = useState(0);
   const [weight, setWeight] = useState(0);
@@ -14,7 +13,7 @@ function Info() {
   const [info, setInfo] = useState([]);
 
   const addInfo = () => {
-    setInfo([name, birthday, gender, height, weight, pastDisease, extra, info]);
+    setInfo([name, gender, height, weight, pastDisease, extra, info]);
   };
   const handleGenderClick = (selectedGender) => {
     setGender(selectedGender);
@@ -92,7 +91,7 @@ function Info() {
           제출
         </Link>
       </div>
-      <img src={IMGG} className="backimg" />
+      <img src={IMGG} className="backimg" alt="이미지" />
     </div>
   );
 }

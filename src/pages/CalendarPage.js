@@ -83,13 +83,13 @@ const CalendarPage = () => {
         </div>
 
         <div className={styles.bottombox}>
-          <img src={IMG} className={styles.smile} />
+          <img src={IMG} className={styles.smile} alt="이미지"/>
           <div className={styles.bottomtext}>
             이번달은 <div className={styles.gren}>건강하게 먹었어요</div>
           </div>
         </div>
       </div>
-      <img src={GRP} className={styles.gra} />
+      <img src={GRP} className={styles.gra} alt="이미지"/>
     </div>
   );
 };
