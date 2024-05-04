@@ -6,8 +6,6 @@ import GRP from "../assets/graph.png";
 const CalendarPage = () => {
   const [value, onChange] = useState(new Date());
 
-  
-
   return (
     <div className={styles.totalbox}>
       <div className={styles.container}>

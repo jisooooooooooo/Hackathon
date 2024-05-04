@@ -29,6 +29,7 @@ function Info() {
           type={"text"}
           placeholder="이름 입력"
           className="info_input"
+          value={name}
           onChange={(event) => setName(event.target.value)}
         ></input>
         <h4 className="info_title">생년월일</h4>
@@ -36,13 +37,19 @@ function Info() {
         <h4 className="info_title">성별</h4>
         <div className="info_gender">
           <button
-            className={gender === "male" ? "info_gender_item active" : "info_gender_item"}
+            className={
+              gender === "male" ? "info_gender_item active" : "info_gender_item"
+            }
             onClick={() => handleGenderClick("male")}
           >
             남
           </button>
           <button
-            className={gender === "female" ? "info_gender_item active" : "info_gender_item"}
+            className={
+              gender === "female"
+                ? "info_gender_item active"
+                : "info_gender_item"
+            }
             onClick={() => handleGenderClick("female")}
           >
             여
@@ -52,8 +59,8 @@ function Info() {
         <h4 className="info_title">키(cm)</h4>
         <input
           placeholder="키 입력"
-          type={"number"}
-          value="키 입력"
+          type="number"
+          value={height}
           className="info_input"
           onChange={(event) => setHeight(event.target.value)}
         ></input>
@@ -62,6 +69,7 @@ function Info() {
           type={"number"}
           placeholder="몸무게 입력"
           className="info_input"
+          value={weight}
           onChange={(event) => setWeight(event.target.value)}
         ></input>
         <h4 className="info_title">과거병력</h4>
@@ -69,6 +77,7 @@ function Info() {
           type={"text"}
           placeholder="과거병력 입력"
           className="info_input"
+          value={pastDisease}
           onChange={(event) => setPastDisease(event.target.value)}
         ></input>
         <h4 className="info_title">기타 입력 (예: 식습관)</h4>
@@ -76,13 +85,14 @@ function Info() {
           type={"text"}
           placeholder="기타 입력"
           className="info_input"
+          value={extra}
           onChange={(event) => setExtra(event.target.value)}
         ></input>
         <Link to="/main" className="submit_button" onClick={addInfo}>
           제출
         </Link>
       </div>
-      <img src={IMGG} className="backimg"/>
+      <img src={IMGG} className="backimg" />
     </div>
   );
 }

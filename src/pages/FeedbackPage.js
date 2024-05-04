@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "../Styles/Feedback.module.css";
 import {
   BarChart,
@@ -13,7 +13,7 @@ import {
 
 import { Link } from "react-router-dom";
 const Feedback = () => {
-  const [selectedIcon, setSelectedIcon] = useState(null);
+  const [selectedIcon, setSelectedIcon] = useState("atopi");
 
   const handleIconClick = (icon) => {
     setSelectedIcon(icon === selectedIcon ? null : icon);
