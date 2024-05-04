@@ -1,10 +1,13 @@
 import React from "react";
 import childPic from "../assets/child.png";
 import "../Styles/MyPage.css";
-function myPage() {
+import myPage from "../assets/myPage.png";
+
+function MyPage() {
   return (
     <>
-      <div>우리아이 성장 한 눈에 보기</div>
+      <img src={myPage} alt="myPage" className="myPage"/>
+      {/* <div>우리아이 성장 한 눈에 보기</div>
       <div className="title">
         <div className="info">
           <div className="co_title">우리 아이 정보</div>
@@ -25,9 +28,9 @@ function myPage() {
           <div className="height">키</div>
           <div className="weight">몸무게</div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
 
-export default myPage;
+export default MyPage;

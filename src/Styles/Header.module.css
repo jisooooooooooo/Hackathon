@@ -7,9 +7,8 @@
   padding: 0 40px;
 }
 .left {
-  width: 48px;
-  height: 48px;
-  background-color: #d9d9d9;
+  width: 55px;
+  height: 55px;
 }
 .right {
   display: flex;
