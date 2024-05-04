@@ -57,6 +57,16 @@
   font-size: 22px;
   margin-bottom: 40px;
 }
+.rightbox {
+  width: 492px;
+  height: 498px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .menu {
   display: flex;
   gap: 50px;

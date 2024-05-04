@@ -1,14 +1,54 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../Styles/Feedback.module.css";
-import graph from "../image/graph.png";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  Cell,
+} from "recharts";
+
+import axios from "axios";
 import { Link } from "react-router-dom";
 const Feedback = () => {
   const [selectedIcon, setSelectedIcon] = useState(null);
+  const [data, setData] = useState([]);
 
   const handleIconClick = (icon) => {
     setSelectedIcon(icon === selectedIcon ? null : icon);
   };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const json = [
+          { name: "열량", value: 1060 },
+          { name: "탄수화물", value: 470 },
+          { name: "단백질", value: 800 },
+          { name: "지방", value: 124 },
+          { name: "당류", value: 18 },
+          { name: "나트륨", value: 32 },
+          { name: "콜레스테롤", value: 42 },
+          { name: "포화지방산", value: 67 },
+          { name: "트랜스지방", value: 10 },
+        ];
+        setData(json);
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
 
+    fetchData();
+  }, []);
+  const getColor = (value) => {
+    if (value < 300) return "#FF9200";
+    // 부족
+    else if (value >= 600 && value <= 900) return "#00BF40";
+    // 적정
+    else return "#FF4242"; // 초과
+  };
   return (
     <div className={styles.container}>
       <div>
@@ -45,10 +85,27 @@ const Feedback = () => {
                 <li>미역국</li>
               </ul>
             </div>
-          </div>
+          </div>{" "}
           <div>
             <div className={styles.todayeat}>오늘 서준이의 영양진단</div>
-            <img src={graph} alt="graph" className={styles.img} />
+            <div className={styles.rightbox}>
+              <BarChart width={412} height={500} layout="vertical" data={data}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis type="number" />
+                <YAxis type="category" dataKey="name" />
+                <Tooltip />
+                <Legend />
+                <Bar
+                  dataKey="value"
+                  fill="#8884d8"
+                  label={{ position: "right" }}
+                >
+                  {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={getColor(entry.value)} />
+                  ))}
+                </Bar>
+              </BarChart>{" "}
+            </div>
           </div>
         </div>
         <div className={styles.bottom_content}>
