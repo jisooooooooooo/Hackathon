@@ -28,7 +28,7 @@ function Chatbot() {
 
   return (
     <div>
-      <div className="title">영양사님께 물어보세요</div>
+      <div className="chat_title">영양사님께 물어보세요</div>
       <ChatBot
         className="chatbot"
         style={{
