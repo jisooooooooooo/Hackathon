@@ -197,7 +197,7 @@ const Feedback = () => {
           </button>
         </div>
       </div>
-      <Link to="/" className={styles.fidback}>
+      <Link to="/main" className={styles.fidback}>
         뒤로가기
       </Link>
     </div>

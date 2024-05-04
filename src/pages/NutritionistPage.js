@@ -6,7 +6,7 @@ import "../Styles/NutriPage.css";
 function nutri() {
   return (
     <>
-      <h1 className="title">원하는 영양사님을 구독해 보세요</h1>
+      <div className="title">원하는 영양사님을 구독해 보세요</div>
       <div className="container">
         <div className="grid-container">
           {nutriData.nutritList.map((value) => (
